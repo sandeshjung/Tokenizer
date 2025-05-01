@@ -36,28 +36,35 @@ BPE discovers frequent subword units by repeating a simple loop:
 
 This process handles words (by breaking them into smaller pieces) and common words (by merging them into single tokens).
 
----
-
 ## 🧮 Mathematical Explanation of BPE
 
-- Start with:
-  V_0 = \{0,1,\ldots,255\}, \quad T = [t_1,t_2,\ldots,t_M], \; t_j \in V_0.
+- **Start with:**
+  
+  $V_0 = \{0,1,\ldots,255\}$
+  
+  $T = [t_1,t_2,\ldots,t_M]$, where $t_j \in V_0$
 
-- At each iteration (i = 1\ldots N):
-  1. Count frequencies:
-     f_i(u,v) = |\{\,j \,|\, (T_j, T_{j+1}) = (u,v)\}|.
-  2. Select highest-frequency pair:
-     (u^*, v^*) = \arg\max_{(u,v)} f_i(u,v).
-  3. Merge:
-       w_i = 256 + i, \quad
-       T \gets \text{replace every }(u^*, v^*)\text{ in }T\text{ with }w_i, \quad
-       V_i = V_{i-1} \cup \{w_i\}.
+- **At each iteration** ($i = 1\ldots N$):
+  
+  1. **Count frequencies:**
+     
+     $f_i(u,v) = |\{\,j \,|\, (T_j, T_{j+1}) = (u,v)\}|$
+  
+  2. **Select highest-frequency pair:**
+     
+     $(u^* , v^* )$ = $pair (u,v)$ with highest frequency $f_i(u,v)$
+  
+  3. **Merge:**
+     
+     $w_i = 256 + i$
+     
+     $T$ ← replace every occurrence of $pair (u^* , v^* )$ in $T$ with $w_i$
+     
+     $V_i = V_{i-1} \cup \{w_i\}$
 
-After (N) merges, your final vocabulary is:
+**After** ($N$) **merges, your final vocabulary is:**
 
-|V_N| = 256 + N.
-
----
+$|V_N| = 256 + N$
 
 ## 📁 Repository Structure
 
