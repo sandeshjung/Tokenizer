@@ -1,11 +1,14 @@
 # 🔖 Byte-Pair Encoding (BPE) Tokenizer
-
 A compact Byte-Pair Encoding (BPE) toolkit inspired by Andrew Karpathy’s hands-on style. This repository shows you how to:
 
 - Turn raw text into integer token sequences (and back).
 - Build a subword vocabulary by iteratively merging the most frequent symbol pairs.
 - Explore implementations in C, Python, and Jupyter Notebook.
 
+<div style="display: flex; flex-direction: column; align-items: center;">
+<img src="assets/BPE.png" alt="BPE process" width="592.8" height="509.6">
+<p style="text-align: center;">Fig. Byte Pair Encoding Process</p>
+</div>
 
 ## 🚀 What Is Tokenization?
 
