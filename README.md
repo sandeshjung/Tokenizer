@@ -90,3 +90,10 @@ tokenizer/                     # root folder
 └   └── tokenizer_nepali.py
 
 ```
+
+## 🔗 References
+
+- [Byte pair encoding: a text compression scheme that accelerates pattern matching](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=1e9441bbad598e181896349757b82af42b6a6902)
+- [minbpe](https://github.com/karpathy/minbpe)
+- [Byte Pair Encoding tokenization - HuggingFace](https://huggingface.co/learn/llm-course/en/chapter6/5)
+- [Implementing A Byte Pair Encoding (BPE) Tokenizer From Scratch](https://sebastianraschka.com/blog/2025/bpe-from-scratch.html)
